@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!--
+	# 프로젝트명 : [TEAM2-통합회원_회원가입]회원가입 페이지 만들기
+	# 파일설명 : 회원가입 페이지 CSS 적용
+	# 파일버전 : 0.1.0
+	# 생성일 : 2025.12.11
+	# 생성자 : 강민승
+	# 수정일 : -
+	# 수정자 : -
+	# 작업내용 : -
+	-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="2025 고1 미래유망분야 고졸인력양성과정 PBL 제안요청서를 읽고 실제 프로젝트로 구현한다." />
+    <meta name=" description" content="2025 고1 미래유망분야 고졸인력양성과정, 실제제안요청서, 실무프로젝트, 팀프로젝트" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="Team: PMO - 유동윤">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/guide/favicon.ico">
+    <link rel="icon" type="image/png" sizes="200x200" href="resources/img/guide/favicon_200.png">
+    <title>이것이 실무 프로젝트이다</title>
+    <link href="resources/css/pattern.css" type="text/css" rel="stylesheet" />
+</head>
+
+<style>
+    .step-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 40px 0 20px;
+    }
+
+    .step-circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 14px;
+        border: 2px solid #E0E0E0;
+        color: #999;
+        background: white;
+    }
+
+    .step-circle.active {
+        background: #1450AA;
+        border-color: #1450AA;
+        color: white;
+    }
+
+    .step-dots {
+        color: #E0E0E0;
+        font-weight: bold;
+    }
+
+    .step-title {
+        text-align: center;
+        color: #1450AA;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .info-box {
+        position: relative;
+        background: #F8F9FA;
+        border: 2px solid #DEDEDE;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 40px;
+    }
+
+    #blue-dot1 {
+        /* Border */
+
+        box-sizing: border-box;
+
+        position: absolute;
+        left: 20px;
+        top: 30px;
+
+    }
+
+    #blue-dot2 {
+        /* Border */
+
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        left: 20px;
+        top: 90px;
+
+    }
+
+    .info-box p {
+        /* 회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여 주시기 바랍니다. */
+        position: relative;
+        left: 20px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 16px;
+        word-break: keep-all;
+        letter-spacing: 0.05rem;
+    }
+
+    .member-type-section {
+        margin: 40px 0;
+    }
+
+    .type-cards {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .type-card {
+        background: #F5F7FA;
+        border-radius: 16px;
+        padding: 50px 60px;
+        text-align: center;
+        min-width: 280px;
+    }
+
+    .type-card-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+    }
+
+    .type-card-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    .type-card-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .btn-member-type {
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-member-primary {
+        background: #1450AA;
+        color: white;
+    }
+
+    .btn-member-primary:hover {
+        background: #0f3d88;
+    }
+
+    .btn-member-secondary {
+        background: white;
+        color: #1450AA;
+        border: 2px solid #1450AA;
+    }
+
+    .btn-member-secondary:hover {
+        background: #f0f4fb;
+    }
+
+    .homepage-notice {
+        background: #EFF5FF;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 50px;
+    }
+
+    .homepage-notice-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .homepage-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .homepage-link {
+        background: white;
+        border: 1px solid #D0E0F5;
+        border-radius: 8px;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: #1450AA;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s;
+    }
+
+    .homepage-link:hover {
+        background: #f5f9ff;
+        border-color: #1450AA;
+    }
+
+    .homepage-link::after {
+        content: "↗";
+        font-size: 14px;
+    }
+
+    .notice-section {
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 2px solid #E0E0E0;
+    }
+
+    .notice-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .notice-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .notice-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .notice-list li:before {
+        content: "●";
+        position: absolute;
+        left: 0;
+        color: #1450AA;
+        font-size: 10px;
+    }
+
+    .cards {
+        /* Margin */
+
+        width: 555px;
+        height: 299px;
+        max-height: 395px;
+
+    }
+
+    @media (max-width: 768px) {
+        .type-cards {
+            flex-direction: column;
+        }
+
+        .homepage-links {
+            grid-template-columns: 1fr;
+        }
+
+        .type-card {
+            padding: 40px 30px;
+        }
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <!-- 본문 바로가기 영역  -->
+        <div id="skip-nav">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <!-- //본문 바로가기 영역  -->
+
+        <!-- Header will be loaded here -->
+        <div id="header-placeholder"></div>
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <div class="inner">
+                <!-- Step Indicator -->
+                <div class="step-indicator">
+                    <div class="step-circle active">1</div>
+                    <span class="step-dots">···</span>
+                    <div class="step-circle">2</div>
+                    <span class="step-dots">···</span>
+                    <div class="step-circle">3</div>
+                    <span class="step-dots">···</span>
+                    <div class="step-circle">4</div>
+                </div>
+
+                <h2 class="step-title">STEP 1. 회원유형선택</h2>
+
+                <!-- Info Box -->
+                <div class="info-box">
+                    <img id="blue-dot1" src="Css_and_other_files/img/component/icon/svgviewer-output.svg" alt="파란 점">
+                    <p>회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여
+                        <br>주시기 바랍니다.
+                    </p>
+                    <img id="blue-dot2" src="Css_and_other_files/img/component/icon/svgviewer-output.svg" alt="파란 점">
+                    <p>본인이 어떤 경우 가입을 취소, 거절할 수 있으며 등의 일이 행위를 수 있습니다.</p>
+                </div>
+
+                <!-- Member Type Cards -->
+                <div class="member-type-section">
+                    <div class="type-cards">
+                        <!-- 통합회원 -->
+                        <div class="type-card cards">
+                            <div class="type-card-icon">
+                                <img src="resources/img/Login/Human_Face.svg" alt="Face_Svg">
+                            </div>
+                            <h3 class="type-card-title">통합회원</h3>
+                            <div class="type-card-buttons">
+                                <button class="btn-member-type btn-member-primary">14세 이상</button>
+                                <button class="btn-member-type btn-member-secondary">14세 미만</button>
+                            </div>
+                        </div>
+
+                        <!-- 비영리단체 -->
+                        <div class="type-card cards">
+                            <div class="type-card-icon">
+                                <img src="resources/img/Login/Hands_Crossed.svg" alt="Hands_Svg">
+                            </div>
+                            <h3 class="type-card-title">비영리단체</h3>
+                            <div class="type-card-buttons">
+                                <button class="btn-member-type btn-member-primary">회원가입</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Homepage Notice -->
+                    <div class="homepage-notice">
+                        <div class="homepage-notice-title">
+                            수원시 통합회원으로 가입하시면 아래 주요 홈페이지를 별도 회원가입 없이 이용할 수 있습니다.
+                        </div>
+                        <div class="homepage-links">
+                            <a href="#" class="homepage-link homepage-card">수원시청 대표 홈페이지</a>
+                            <a href="#" class="homepage-link">새빛택시</a>
+                            <a href="#" class="homepage-link">생방송등</a>
+                            <a href="#" class="homepage-link">수원시 도서관사이트</a>
+                            <a href="#" class="homepage-link">수원복불관</a>
+                            <a href="#" class="homepage-link">수원시립미술관</a>
+                            <a href="#" class="homepage-link">청소년·학습이 개시신청 신청팀</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notice Section -->
+                <div class="notice-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="notice-title">개인정보보호</h3>
+                            <ul class="notice-list">
+                                <li>수원시는 사용자의 개인정보 보호를 위해 최선의 노력을 기울이고 있습니다.</li>
+                                <li>귀하의 개인정보는 등의 의미 공개되지 않으며, 개인정보보호정책에 의해 보호받고 있습니다.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="notice-title">법령설정</h3>
+                            <ul class="notice-list">
+                                <li>본 사이트에서 법령을 생성할 수 있도록 예주세요.</li>
+                                <li>본인인증을 위한 정보입력 과정에서 타인이 생성되지 않습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- Footer will be loaded here -->
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- 스크립트 : 라이브러리 -->
+    <script src="resources/js/pattern/jquery.min.js"></script>
+    <script src="resources/js/pattern/swiper-bundle.min.js"></script>
+
+    <!-- 스크립트 : 패턴 페이지 -->
+    <script src="resources/js/pattern/ui-pattern-script.js"></script>
+
+    <!-- 스크립트 : 컴포넌트 -->
+    <script src="resources/js/component/ui-script.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script src="layout-loader.js"></script>
+
+
+</body>
+
+</html>
