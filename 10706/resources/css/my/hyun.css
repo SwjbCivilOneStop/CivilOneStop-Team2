@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 포스터를 만들기 위한 디자인 자료조사
+# 파일버전 : 1.0.0
+# 생성일 : 2025.05.31
+# 생성자 : 노승현
+# 수정일 : -
+# 수정자 : -
+# 작업내용 : 문서 환경설정 복습 적용
+*/
+
+#container {
+    background-color: red;
+}
+.bg{
+    height: 1080px;
+}
+
+#wrapper{overflow:hidden;position:relative;min-width:1200px;background: #E1EDFA;
+background: linear-gradient(135deg,rgba(225, 237, 250, 1) 0%, rgba(255, 255, 255, 1) 100%);}
+.wrap{position:relative;width:1200px;margin:0 auto;}
+.wrap1000{position:relative;width:1000px;margin:0 auto;}
+.wrap770{position:relative;width:770px;margin:0 auto;}
+.skip{overflow:hidden;}
+a:link{color:#333333;text-decoration:none;}
+a:visited{color:#333333;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:active{text-decoration:underline;}
+a span{cursor:pointer;}
+a:hover{text-decoration:underline;}
+button{font-family:'S-CoreDream', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;cursor:pointer;}
+input{font-family:'S-CoreDream', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;}
+input[type="submit"]{cursor:pointer;}
+
+/* web */
+@media screen and (max-width:1400px){
+#wrapper{min-width:1000px;}
+.wrap{width:1000px;}
+.wrap1000{width:1000px;}
+}
+@media screen and (max-width:1200px){
+#wrapper{min-width:1000px;}
+.wrap{width:1000px;}
+.wrap1000{width:900px;}
+}
+@media screen and (max-width:1000px){
+#wrapper{min-width:auto;}
+.wrap{width:94%;}
+.wrap1000{width:94%;}
+.wrap770{width:94%;}
+}
+@media screen and (max-width:640px){
+.wrap770{width:94%;}
+.wrap1000{width:auto;}
+}
+
+.login-border {
+    height: 1080px;
+    width: 1000px;
+    background-color: white;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    box-shadow : 0px 0px 10px 0px gray;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.login-font {
+    color: #0c4da2;
+    text-align: center;
+    font-size: 50px;
+}
+
+.iddiv {
+    margin-top: 150px;
+}
+.iddiv2 {
+    margin-top: 50px;
+}
+
+#id {
+    height: 70px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    outline: none;
+    padding-left: 10px;
+}
+
+#id:focus {
+    border: 1px solid black;
+}
+
+.loginbt {
+    height: 70px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #0c4da2;
+    border: none;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}

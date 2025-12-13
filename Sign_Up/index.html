@@ -12,7 +12,7 @@
 		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 	<link href="resources/css/pattern.css" type="text/css" rel="stylesheet" />
 	<style>
-	/*
+		/*
 	# 프로젝트명 : [TEAM2-통합회원_회원가입]회원가입 페이지 만들기
 	# 파일설명 : 회원가입 페이지 CSS 적용
 	# 파일버전 : 0.1.0
@@ -23,7 +23,8 @@
 	# 작업내용 : -
     */
 
-        .step-indicator {
+
+		.step-indicator {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -73,40 +74,18 @@
 			margin-bottom: 40px;
 		}
 
-		#blue-dot1 {
-            /* Border */
+		.info-box p {
+			/* 회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여 주시기 바랍니다. */
+			position: relative;
+			left: 20px;
+			font-family: 'Inter';
+			font-style: normal;
+			font-size: 16px;
+			word-break: keep-all;
+			letter-spacing: 0.05rem;
 
-            box-sizing: border-box;
+		}
 
-            position: absolute;
-            left: 20px;
-            top: 30px;
-
-        }
-        
-		#blue-dot2 {
-            /* Border */
-
-            box-sizing: border-box;
-
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            left: 20px;
-            top: 90px;
-
-        }
-     .info-box p {
-        /* 회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여 주시기 바랍니다. */
-        position: relative;
-        left: 20px;
-        font-family: 'Inter';
-        font-style: normal; 
-        font-size: 16px;
-        word-break: keep-all;
-        letter-spacing: 0.05rem;
-     }
-		
 		.member-type-section {
 			margin: 40px 0;
 		}
@@ -253,14 +232,14 @@
 			font-size: 10px;
 		}
 
-        .cards{
-            /* Margin */
+		.cards {
+			/* Margin */
 
-            width: 555px;
-            height: 299px;
-            max-height: 395px;
+			width: 555px;
+			height: 299px;
+			max-height: 395px;
 
-        }
+		}
 
 		@media (max-width: 768px) {
 			.type-cards {
@@ -1028,9 +1007,13 @@
 
 				<!-- Info Box -->
 				<div class="info-box">
-					<img id="blue-dot1" src="Css_and_other_files/img/component/icon/svgviewer-output.svg" alt="파란 점"><p>회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여
-					<br>주시기 바랍니다.</p>
-					<img id="blue-dot2" src="Css_and_other_files/img/component/icon/svgviewer-output.svg" alt="파란 점"><p>본인이 어떤 경우 가입을 취소, 거절할 수 있으며 등의 일이 행위를 수 있습니다.</p>
+
+					<p><img id="blue-dot1" src="Css_and_other_files/img/component/icon/ico_blue_marker.svg"
+							alt="파란 점">회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여
+						<br>주시기 바랍니다.
+					</p>
+					<p><img id="blue-dot1" src="Css_and_other_files/img/component/icon/ico_blue_marker.svg"
+							alt="파란 점">본인이 어떤 경우 가입을 취소, 거절할 수 있으며 등의 일이 행위를 수 있습니다.</p>
 				</div>
 
 				<!-- Member Type Cards -->
@@ -1160,7 +1143,7 @@
 		</footer>
 	</div>
 
-    <!-- 스크립트 : 라이브러리 -->
+	<!-- 스크립트 : 라이브러리 -->
 	<script src="resources/js/pattern/jquery.min.js"></script>
 
 	<!-- 스크립트 : 패턴 페이지 -->
@@ -1170,7 +1153,7 @@
 
 	<!-- 스크립트 : 컴포넌트 -->
 	<script src="resources/js/component/ui-script.js"></script>
-    
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
 		crossorigin="anonymous"></script>
