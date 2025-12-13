@@ -1,0 +1,253 @@
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 40px 0 20px;
+        }
+
+        .step-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            border: 2px solid #E0E0E0;
+            color: #999;
+            background: white;
+        }
+
+        .step-circle.active {
+            background: #1450AA;
+            border-color: #1450AA;
+            color: white;
+        }
+
+        .step-dots {
+            color: #E0E0E0;
+            font-weight: bold;
+        }
+
+        .step-title {
+            text-align: center;
+            color: #1450AA;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            position: relative;
+            background: #F8F9FA;
+            border: 2px solid #DEDEDE;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        #blue-dot1 {
+            /* Border */
+
+            box-sizing: border-box;
+
+            position: absolute;
+            left: 20px;
+            top: 30px;
+
+        }
+
+        #blue-dot2 {
+            /* Border */
+
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 20px;
+            top: 90px;
+
+        }
+
+        .info-box p {
+            /* 회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여 주시기 바랍니다. */
+            position: relative;
+            left: 20px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-size: 16px;
+            word-break: keep-all;
+            letter-spacing: 0.05rem;
+        }
+
+        .member-type-section {
+            margin: 40px 0;
+        }
+
+        .type-cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .type-card {
+            background: #F5F7FA;
+            border-radius: 16px;
+            padding: 50px 60px;
+            text-align: center;
+            min-width: 280px;
+        }
+
+        .type-card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        .type-card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .type-card-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn-member-type {
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-member-primary {
+            background: #1450AA;
+            color: white;
+        }
+
+        .btn-member-primary:hover {
+            background: #0f3d88;
+        }
+
+        .btn-member-secondary {
+            background: white;
+            color: #1450AA;
+            border: 2px solid #1450AA;
+        }
+
+        .btn-member-secondary:hover {
+            background: #f0f4fb;
+        }
+
+        .homepage-notice {
+            background: #EFF5FF;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .homepage-notice-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .homepage-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .homepage-link {
+            background: white;
+            border: 1px solid #D0E0F5;
+            border-radius: 8px;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: #1450AA;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+
+        .homepage-link:hover {
+            background: #f5f9ff;
+            border-color: #1450AA;
+        }
+
+        .homepage-link::after {
+            content: "↗";
+            font-size: 14px;
+        }
+
+        .notice-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid #E0E0E0;
+        }
+
+        .notice-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .notice-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .notice-list li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #1450AA;
+            font-size: 10px;
+        }
+
+        .cards {
+            /* Margin */
+
+            width: 555px;
+            height: 299px;
+            max-height: 395px;
+
+        }
+
+        @media (max-width: 768px) {
+            .type-cards {
+                flex-direction: column;
+            }
+
+            .homepage-links {
+                grid-template-columns: 1fr;
+            }
+
+            .type-card {
+                padding: 40px 30px;
+            }
+        }
