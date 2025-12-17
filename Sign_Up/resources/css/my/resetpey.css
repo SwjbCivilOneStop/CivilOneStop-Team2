@@ -37,39 +37,36 @@
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 30px;
+            font-family: 'HakgyoansimJiugaeR';
         }
 
         .info-box {
-            position: relative;
-            background: #F8F9FA;
             border: 2px solid #DEDEDE;
             border-radius: 12px;
             padding: 24px;
             margin-bottom: 40px;
         }
-
-        #blue-dot1 {
-            /* Border */
-
-            box-sizing: border-box;
-
-            position: absolute;
-            left: 20px;
-            top: 30px;
-
+        
+        .info-box-text {
+            position: relative;
+            display: block;
+            padding-left: 22px;
+            letter-spacing: 0.05rem;
+            font-family: 'S-CoreDream';
+            line-height: 30px;
+            word-break: keep-all;
         }
 
-        #blue-dot2 {
-            /* Border */
-
-            box-sizing: border-box;
-
+        .info-box-text::before {
+            display: block;
             position: absolute;
+            top: 8px;
+            left: 0;
+            content: "";
             width: 12px;
             height: 12px;
-            left: 20px;
-            top: 90px;
-
+            border: 4px solid #0c4da2;
+            border-radius: 50%;
         }
 
         .info-box p {
