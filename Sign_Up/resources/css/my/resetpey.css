@@ -200,14 +200,29 @@
             font-size: 18px;
             font-weight: 700;
             color: #333;
-            margin-bottom: 15px;
+            margin-top: 20px;
         }
 
         .warning {
             font-family: 'S-CoreDream';
             position: relative;
-            left: 22px;
-            margin-top: 2px;
+            padding-left: 22px;
+            line-height: 1.5rem;
+            word-break: keep-all;
+            
+        }
+
+        .warning::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 15px;
+            height: 15px;
+            background-image: url(https://www.suwon.go.kr/resources/web/membership_2025/images/warning_icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
 
@@ -236,5 +251,4 @@
                 flex-direction: column;
                 width: auto;
             }
-
         }
