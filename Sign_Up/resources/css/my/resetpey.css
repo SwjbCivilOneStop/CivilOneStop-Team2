@@ -41,7 +41,8 @@
         }
 
         .info-box {
-            border: 2px solid #DEDEDE;
+            width: auto;
+            border: 1px solid #DEDEDE;
             border-radius: 12px;
             padding: 24px;
             margin-bottom: 40px;
@@ -69,17 +70,6 @@
             border-radius: 50%;
         }
 
-        .info-box p {
-            /* 회원구분에 따라 회원가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택하여 주시기 바랍니다. */
-            position: relative;
-            left: 20px;
-            font-family: 'Inter';
-            font-style: normal;
-            font-size: 16px;
-            word-break: keep-all;
-            letter-spacing: 0.05rem;
-        }
-
         .member-type-section {
             margin: 40px 0;
         }
@@ -96,7 +86,7 @@
             border-radius: 16px;
             padding: 50px 60px;
             text-align: center;
-            min-width: 280px;
+            width: 100%;
         }
 
         .type-card-icon {
@@ -118,6 +108,13 @@
             justify-content: center;
         }
 
+        .cards {
+            /* Margin */
+
+            width: 100%;
+            height: 20em;
+        }
+
         .btn-member-type {
             padding: 12px 30px;
             border-radius: 8px;
@@ -126,6 +123,7 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s;
+            word-break: keep-all;
         }
 
         .btn-member-primary {
@@ -205,46 +203,41 @@
             margin-bottom: 15px;
         }
 
-        .notice-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .notice-list li {
+        .warning {
+            font-family: 'S-CoreDream';
             position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            color: #555;
-            line-height: 1.6;
+            left: 22px;
+            margin-top: 2px;
         }
 
-        .notice-list li:before {
-            content: "●";
-            position: absolute;
-            left: 0;
-            color: #1450AA;
-            font-size: 10px;
-        }
 
-        .cards {
-            /* Margin */
-
-            width: 555px;
-            height: 299px;
-            max-height: 395px;
-
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             .type-cards {
-                flex-direction: column;
+                flex-direction: row;
+                width: 100%;
             }
 
+            .type-card-buttons {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            
             .homepage-links {
                 grid-template-columns: 1fr;
             }
 
             .type-card {
                 padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .type-cards {
+                flex-direction: column;
+                width: auto;
+            }
+
+            .cards {
+
             }
         }
